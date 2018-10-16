@@ -16,13 +16,17 @@
                 <button class="button-border button-small">GB</button>
                 <button class="button-border button-small">USD</button>
             </div>
-            <div class="announcement">
+            <div class="announcement center">
                 <h2>Announce something here</h2>
             </div>
             <div id="languages">
-                <select name="language" id="language">
+                <div class="custom-dropdown">
+                    <div class="dropdown-selected">UK</div>
+                    <img class="dropdown-arrow" src="img/icon/down.svg" alt="down-arrow">
+                </div>
+                <!-- <select name="language" id="language">
                     <option value="UK">UK</option>
-                </select>
+                </select> -->
             </div>
         </div> 
     </div>
@@ -30,16 +34,16 @@
         <div class="header-logo">
             <img src="/img/Large.svg" alt="logo">
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav center">
             <ul class="main-links">
                 <li>Home</li>
                 <li>Collections</li>
-                <!-- TODO: Add in dropdown HTML --> 
+                <!--TODO: Add in dropdown HTML --> 
                 <li>Lookbook</li>
                 <li>About</li>
             </ul>
         </nav>
-        <ul class="icon-links">
+        <ul class="icon-links pull-right">
             <li>
                 <img src="/img/icon/search.svg" alt="search">
             </li>
@@ -51,11 +55,20 @@
             </li>
         </ul>
         <img src="/img/icon/bag.svg" alt="bag">
+        <!--TODO: Add in dropdown HTML-->
     </header>
     <div class="container-full slider">
         <h1>Image Slider</h1>
-        <aside>Tell us your brand's story through video and images</aside>
+        <aside>Tell us your brand's story through videos and images</aside>
         <button>Explore</button>
+        <!--TODO: Add in slider navigation HTML-->
+        <div class="slider-pagination">
+            <div class="page-icon page-icon-active"></div>
+            <div class="page-icon"></div>
+            <div class="page-icon"></div>
+        </div>
+        <div class="controls back"><a href="#"><img src="img/icon/back.svg" alt="back"></a></div>
+        <div class="controls next"><a href="#"><img src="img/icon/forward.svg" alt="next"></a></div>
     </div>
 </body>
 </html>
