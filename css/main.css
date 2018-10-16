@@ -76,11 +76,16 @@ h1 {
     font-weight: normal;
 }
 button {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     text-transform: uppercase;
     text-align: center;
     color: #ffffff;
     background-color: #2D4966;
+    padding: 15px 35px 18px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
 }
 .container {
     margin: 0 auto;
@@ -93,7 +98,7 @@ button {
     width: 100%;
 }
 .button-small {
-    font-family: 'Roboto Mono', monospace;
+
     font-size: 11px;
     line-height: 15px;
     min-width: 50px;
@@ -104,6 +109,17 @@ button {
     background-color: rgba(255,255,255,0);
     border: 1px solid #2D4966;
 }
+.center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.pull-left {
+    margin-right: auto;
+}
+.pull-right {
+    margin-left: auto;
+}
 .topbar {
     background-color: #E9F0F7;
     height: 50px;
@@ -113,9 +129,16 @@ button {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    position: relative;
 }
 .announcement {
     text-transform: uppercase;
+}
+.custom-dropdown {
+    display: flex;
+}
+.dropdown-selected {
+    margin-right: 14px;
 }
 header {
     height: 120px;
@@ -140,12 +163,72 @@ header .container {
     color: #2D4966;
     font-size: 16px;
 }
+.main-links li {
+    margin-right: 92px;
+}
+.main-links li:last-of-type {
+    margin-right: 0;
+}
 .icon-links {
     display: flex;
+}
+.icon-links li {
+    margin-right: 15px;
 }
 .slider {
     height: 672px;
     background-image: url(/img/slider/Background.jpg);
     background-size: cover;
     background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    position: relative;
+}
+.slider * {
+    text-align: center;
+}
+.slider h1 {
+    margin-bottom: 24px;
+}
+.slider aside {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.4px;
+    margin-bottom: 41px;
+}
+.slider-pagination {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 43px;
+}
+.page-icon {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    border-radius: 50%;
+    opacity: 0.6;
+    background-color: #ffffff;
+    display: inline-block;
+}
+.page-icon-active {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+}
+.controls {
+    position: absolute;
+}
+.controls img {
+    width: 32px;
+    height: 32px;
+}
+.controls.back {
+    left: 76px;
+}
+.controls.next {
+    right: 76px;
 }
