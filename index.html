@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js" type="text/javascript"></script>
     <title>Technical Test</title>
 </head>
 <body>
@@ -20,9 +19,9 @@
                 <h2>Announce something here</h2>
             </div>
             <div id="languages">
-                <div class="custom-dropdown">
-                    <div class="dropdown-selected">UK</div>
-                    <img class="dropdown-arrow" src="img/icon/down.svg" alt="down-arrow">
+                <div class="custom-select">
+                    <div class="select-selected">UK</div>
+                    <img class="select-arrow" src="img/icon/down.svg" alt="down-arrow">
                 </div>
                 <!-- <select name="language" id="language">
                     <option value="UK">UK</option>
@@ -36,11 +35,33 @@
         </div>
         <nav class="main-nav center">
             <ul class="main-links">
-                <li>Home</li>
-                <li>Collections</li>
-                <!--TODO: Add in dropdown HTML --> 
-                <li>Lookbook</li>
-                <li>About</li>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Collections</a>
+                    <!--TODO: Add in dropdown HTML -->
+                    <div class="dropdown-container center">
+                        <div class="dropdown-content"> 
+                            <div class="dropdown-col-multi">
+                                <ul class="dropdown-list">
+                                    <li>Collection 1</li>
+                                    <li>Collection 2</li>
+                                    <li>Collection 3</li>
+                                    <li>Collection 4</li>
+                                </ul>
+                                <ul class="dropdown-list">
+                                    <li>Collection 1</li>
+                                    <li>Collection 2</li>
+                                    <li>Collection 3</li>
+                                    <li>Collection 4</li>
+                                </ul>
+                                <div class="placeholder"><img src="img/Large.svg" alt="" class="img-small"></div>
+                                <div class="placeholder"><img src="img/Large.svg" alt="" class="img-small"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Lookbook</a></li>
+                <li><a href="#">About</a></li>
             </ul>
         </nav>
         <ul class="icon-links pull-right">
@@ -54,8 +75,43 @@
                 <img src="/img/icon/heart.svg" alt="heart">
             </li>
         </ul>
-        <img src="/img/icon/bag.svg" alt="bag">
-        <!--TODO: Add in dropdown HTML-->
+        <div class="shopping-bag dropdown">
+            <img src="/img/icon/bag.svg" alt="bag">
+            <div class="dropdown-container right">
+                <div class="dropdown-content cart">
+                    <div class="cart-content">
+                        <h2 class="cart-header">Your Cart</h2>
+                        <div class="item-container">
+                            <div class="item">
+                                <img src="img/Large.svg" alt="item-placeholder" class="item-img img-small">
+                                <h3 class="item-name">Product Title</h3>
+                                <p class="item-description">Variant name</p>
+                                <div class="quantity-selector">
+                                    <span class="decrease">-</span>
+                                    <span class="item-quantity">2</span>
+                                    <span class="increase">+</span>
+                                </div>
+                                <p class="item-price">£60.00</p>
+                                <div class="delete"><img src="img/icon/cancel.svg" alt="remove"></div>                    
+                            </div>
+                            <div class="item">
+                                <img src="img/Large.svg" alt="item-placeholder" class="item-img img-small">
+                                <h3 class="item-name">Product Title</h3>
+                                <p class="item-description">Variant name</p>
+                                <div class="quantity-selector">
+                                    <span class="decrease">-</span>
+                                    <span class="item-quantity">2</span>
+                                    <span class="increase">+</span>
+                                </div>
+                                <p class="item-price">£60.00</p>
+                                <div class="delete"><img src="img/icon/cancel.svg" alt="remove"></div>                                        
+                            </div>
+                        </div>
+                        <button class="checkout">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="container-full slider">
         <h1>Image Slider</h1>
@@ -70,5 +126,6 @@
         <div class="controls back"><a href="#"><img src="img/icon/back.svg" alt="back"></a></div>
         <div class="controls next"><a href="#"><img src="img/icon/forward.svg" alt="next"></a></div>
     </div>
+    <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
