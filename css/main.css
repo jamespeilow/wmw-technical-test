@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto+Mono:500');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto+Mono:400,500');
 
 /* RESET CSS */
 html, body, div, span, applet, object, iframe,
@@ -54,6 +54,7 @@ html {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 body { 
@@ -86,12 +87,13 @@ button {
     font-size: 16px;
     letter-spacing: 2px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 .container {
     margin: 0 auto;
     max-width: 1440px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 8px;
+    padding-right: 8px;
     width: 100%
 }
 .container-full {
@@ -113,6 +115,7 @@ button {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    z-index: 2;
 }
 .pull-left {
     margin-right: auto;
@@ -134,10 +137,10 @@ button {
 .announcement {
     text-transform: uppercase;
 }
-.custom-dropdown {
+.custom-select {
     display: flex;
 }
-.dropdown-selected {
+.select-selected {
     margin-right: 14px;
 }
 header {
@@ -160,8 +163,10 @@ header .container {
     text-transform: uppercase;
     line-height: 21px;
     letter-spacing: 2px;
-    color: #2D4966;
     font-size: 16px;
+}
+.main-links a {
+    color: #2D4966;
 }
 .main-links li {
     margin-right: 92px;
@@ -231,4 +236,149 @@ header .container {
 }
 .controls.next {
     right: 76px;
+}
+.placeholder {
+    background-color: #EAEAEA;
+    border: 1px solid #CDCDCD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 213.68px;
+}
+.img-small {
+    width: 46px;
+    height: 36px;
+}
+.dropdown-container {
+    display: none;
+    position: absolute;
+    padding-top: 40px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.dropdown-content {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.17);
+    position: relative;
+    padding: 34px 26px;    
+}
+.dropdown-container.right {
+    right: 0;
+}
+.dropdown-container.left {
+    left: 0;
+}
+.dropdown-container.center {
+    left: 50%;
+    transform: translate(-50%);
+}
+/* .dropdown:hover .dropdown-container {
+    display: block;
+} */
+.trigger-enter .dropdown-container {
+    display: block;
+}
+.trigger-enter-active .dropdown-container {
+    opacity: 1;
+}
+.dropdown-col-multi {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 45px;
+}
+.dropdown-content:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    border-left: inherit;
+    border-top: inherit;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: inherit;
+}
+.dropdown .dropdown-list {
+    text-transform: none;
+    margin-top: 23px;
+}
+.dropdown ul li {
+    margin-right: 0;
+    text-align: center;
+    letter-spacing: normal;
+    margin-bottom: 16px;   
+}
+.shopping-bag {
+    position: relative;
+    z-index: 3;
+}
+.shopping-bag .dropdown-container {
+    padding-top: 20px;
+    right: -20px;
+}
+.cart.dropdown-content:before {
+    position: absolute;
+    left: auto;
+    right: 25px;
+    top: 0;
+    transform: translateY(-50%) rotate(45deg);
+}
+.dropdown .cart {
+    padding: 34px 30px 37px 33px;
+    width: 295px;
+    box-sizing: content-box;
+    line-height: 26px;
+    letter-spacing: normal;
+}
+.cart-header {
+    color: #181818;
+    font-size: 22px;
+    line-height: 29px;
+    margin-bottom: 23px;
+}
+.item {
+    clear: both;
+    padding: 17px 0 21px;
+    border-top: 1px solid #EAEAEA;
+    position: relative;
+}
+.item-img {
+	padding: 38px;
+    background-color: #EAEAEA;
+    float: left;
+    margin-right: 19px;
+}
+.item-name {
+    color: #191919;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: normal;
+    font-weight: normal;
+}
+.item-description {
+    color: #979797;
+    font-size: 13px;
+}
+item.quantity-selector {
+    font-size: 16px;
+}
+.item-price {
+    font-size: 22px;
+    font-weight: 500;
+}
+.item .delete {
+    position: absolute;
+    padding-top: inherit;
+    right: 0;
+    top: 0;
+}
+.delete img {
+    width: 15px;
+    height: 15px;
+}
+button.checkout {
+    margin-top: 7px;
+    width: 100%;
 }
