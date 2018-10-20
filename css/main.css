@@ -287,9 +287,6 @@ header .container {
     left: 50%;
     transform: translate(-50%);
 }
-/* .dropdown:hover .dropdown-container {
-    display: block;
-} */
 .trigger-enter .dropdown-container {
     display: block;
 }
@@ -369,6 +366,7 @@ header .container {
     background-color: #EAEAEA;
     float: left;
     margin-right: 19px;
+    box-sizing: content-box;
 }
 .item-name {
     color: #191919;
@@ -401,6 +399,9 @@ item.quantity-selector {
 button.checkout {
     margin-top: 7px;
     width: 100%;
+}
+.delete, .decrease, .increase, .icon-links, .custom-select {
+    cursor: pointer;
 }
 @media screen and (max-width: 1460px) {
     .shopping-bag .dropdown-container {
@@ -480,8 +481,6 @@ button.checkout {
     }
     .main-links .dropdown-container {
         position: relative;
-        /* opacity: 1;
-        display: block; */
         padding-top: 20px;
     }
     .main-links .dropdown-content::before {
