@@ -30,11 +30,28 @@
         </div> 
     </div>
     <header class="container">
+        <a class="menu-toggle" href="#">
+            <img src="img/icon/mobile_drawer.svg" alt="toggle menu">
+        </a>
         <div class="header-logo">
             <img src="/img/Large.svg" alt="logo">
         </div>
-        <nav class="main-nav center">
-            <ul class="main-links">
+        <nav class="main-nav">
+            <a class="menu-toggle" href="#">
+                <img src="img/icon/cancel.svg" alt="toggle menu">
+            </a>
+            <ul class="icon-links pull-right">
+                <li>
+                    <img src="/img/icon/search.svg" alt="search">
+                </li>
+                <li>
+                    <img src="/img/icon/profile.svg" alt="profile">
+                </li>
+                <li>
+                    <img src="/img/icon/heart.svg" alt="heart">
+                </li>
+            </ul>
+            <ul class="main-links center">
                 <li><a href="#">Home</a></li>
                 <li class="dropdown">
                     <a href="#">Collections</a>
@@ -54,8 +71,12 @@
                                     <li>Collection 3</li>
                                     <li>Collection 4</li>
                                 </ul>
-                                <div class="placeholder"><img src="img/Large.svg" alt="" class="img-small"></div>
-                                <div class="placeholder"><img src="img/Large.svg" alt="" class="img-small"></div>
+                                <div class="dropdown-image">
+                                    <div class="placeholder"><img src="img/Large.svg" alt="" class="img-small"></div>
+                                </div>
+                                <div class="dropdown-image">
+                                    <div class="placeholder"><img src="img/Large.svg" alt="" class="img-small"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,18 +85,7 @@
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
-        <ul class="icon-links pull-right">
-            <li>
-                <img src="/img/icon/search.svg" alt="search">
-            </li>
-            <li>
-                <img src="/img/icon/profile.svg" alt="profile">
-            </li>
-            <li>
-                <img src="/img/icon/heart.svg" alt="heart">
-            </li>
-        </ul>
-        <div class="shopping-bag dropdown">
+        <div class="shopping-bag pull-right dropdown">
             <img src="/img/icon/bag.svg" alt="bag">
             <div class="dropdown-container right">
                 <div class="dropdown-content cart">
