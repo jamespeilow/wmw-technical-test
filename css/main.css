@@ -359,7 +359,7 @@ header .container {
     margin-bottom: 23px;
 }
 .item {
-    clear: both;
+    display: flex;
     padding: 17px 0 21px;
     border-top: 1px solid #EAEAEA;
     position: relative;
